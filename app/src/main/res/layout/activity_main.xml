@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lütfen Değerlerinizi Seçiniz"
+            android:textColor="@color/black"
+            android:textSize="12pt" />
+
+        <TextView
+            android:id="@+id/ppe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PPE değeriniz"
+            android:textColor="@color/black"
+            android:textSize="10pt" />
+        <RadioButton
+            android:id="@+id/ppeB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.134'den büyük" />
+        <RadioButton
+            android:id="@+id/ppeK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.134'den küçük veya eşit" />
+
+        <TextView
+            android:id="@+id/shimmerAPQ5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shimmer:APQ5 değeriniz"
+            android:textColor="@color/black"
+            android:textSize="10pt" />
+        <RadioButton
+            android:id="@+id/shimmerAPQ5B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.013'den büyük" />
+        <RadioButton
+            android:id="@+id/shimmerAPQ5K"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.013'den küçük veya eşit" />
+
+        <TextView
+            android:id="@+id/MDVPFoHz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MDVP:Fo(Hz) değeriniz"
+            android:textColor="@color/black"
+            android:textSize="10pt" />
+        <RadioButton
+            android:id="@+id/MDVPFoHzB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="117.987'den büyük" />
+        <RadioButton
+            android:id="@+id/MDVPFoHzK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="117.987'den küçük veya eşit" />
+
+        <TextView
+            android:id="@+id/MDVPShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MDVP:Shimmer değeriniz"
+            android:textColor="@color/black"
+            android:textSize="10pt" />
+        <RadioButton
+            android:id="@+id/MDVPShimmerB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.021'den büyük" />
+        <RadioButton
+            android:id="@+id/MDVPShimmerK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.021'den küçük veya eşit" />
+
+
+
+    </LinearLayout>
+</ScrollView>
