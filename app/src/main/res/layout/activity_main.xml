@@ -1,97 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lütfen Değerlerinizi Seçiniz"
-            android:textColor="@color/black"
-            android:textSize="12pt" />
-
-        <TextView
-            android:id="@+id/ppe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PPE değeriniz"
-            android:textColor="@color/black"
-            android:textSize="10pt" />
-        <RadioButton
-            android:id="@+id/ppeB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.134'den büyük" />
-        <RadioButton
-            android:id="@+id/ppeK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.134'den küçük veya eşit" />
-
-        <TextView
-            android:id="@+id/shimmerAPQ5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shimmer:APQ5 değeriniz"
-            android:textColor="@color/black"
-            android:textSize="10pt" />
-        <RadioButton
-            android:id="@+id/shimmerAPQ5B"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.013'den büyük" />
-        <RadioButton
-            android:id="@+id/shimmerAPQ5K"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.013'den küçük veya eşit" />
-
-        <TextView
-            android:id="@+id/MDVPFoHz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MDVP:Fo(Hz) değeriniz"
-            android:textColor="@color/black"
-            android:textSize="10pt" />
-        <RadioButton
-            android:id="@+id/MDVPFoHzB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="117.987'den büyük" />
-        <RadioButton
-            android:id="@+id/MDVPFoHzK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="117.987'den küçük veya eşit" />
-
-        <TextView
-            android:id="@+id/MDVPShimmer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MDVP:Shimmer değeriniz"
-            android:textColor="@color/black"
-            android:textSize="10pt" />
-        <RadioButton
-            android:id="@+id/MDVPShimmerB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.021'den büyük" />
-        <RadioButton
-            android:id="@+id/MDVPShimmerK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0.021'den küçük veya eşit" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lütfen Değerlerinizi Seçiniz"
+        android:textColor="@color/black"
+        android:textSize="12pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
+    <TextView
+        android:id="@+id/ppe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="PPE değeriniz"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    </LinearLayout>
-</ScrollView>
+    <EditText
+        android:id="@+id/ppeNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ppe" />
+
+    <TextView
+        android:id="@+id/MDVPShimmerdB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MDVP: Shimmer(dB) değeriniz"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        app:layout_constraintTop_toBottomOf="@+id/ppeNum"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/RPDE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="RPDE değeriniz"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foNum" />
+
+    <EditText
+        android:id="@+id/foNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MDVPFoHz" />
+
+    <TextView
+        android:id="@+id/spread2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="spread2 değeriniz"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rpdeNum" />
+
+    <TextView
+        android:id="@+id/MDVPFoHz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MDVP:Fo(Hz) değeriniz"
+        android:textColor="@color/black"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shimmerNum" />
+
+    <EditText
+        android:id="@+id/spreadNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spread2" />
+
+    <EditText
+        android:id="@+id/rpdeNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RPDE" />
+
+    <EditText
+        android:id="@+id/shimmerNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MDVPShimmerdB" />
+
+    <Button
+        android:id="@+id/kaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="kaydet"
+        android:text="Kaydet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spreadNum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
